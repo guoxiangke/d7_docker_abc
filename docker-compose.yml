@@ -4,10 +4,10 @@ services:
     web:
         image: nginx:latest
         restart: always
-        # network_mode: "bridge"
-        networks:
-          bridge:
-            ipv4_address: 172.17.0.251
+        network_mode: "bridge"
+        # networks:
+        #   static-network:
+        #     ipv4_address: 172.17.0.251
         volumes:
             - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
             #- ./conf/nginx/site.conf:/etc/nginx/conf.d/default.conf
