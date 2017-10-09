@@ -6,7 +6,7 @@ services:
         restart: always
         # network_mode: "bridge"
         networks:
-          static-network:
+          bridge:
             ipv4_address: 172.17.0.251
         volumes:
             - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
