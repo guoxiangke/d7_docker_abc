@@ -46,10 +46,10 @@ services:
       volumes_from:
         - storage-drupal
       environment:
-        - MYSQL_USER=drupal
-        - MYSQL_PASSWORD=drupal
-        - MYSQL_DATABASE=drupal
-        - MYSQL_ROOT_PASSWORD=drupal
+        - MYSQL_USER=abc
+        - MYSQL_PASSWORD=abc
+        - MYSQL_DATABASE=abc
+        - MYSQL_ROOT_PASSWORD=abc
 
     #################
     storage-drupal:
