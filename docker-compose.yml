@@ -4,7 +4,7 @@ services:
     web:
         image: nginx:latest
         restart: always
-        network_mode: "bridge"
+        # network_mode: "bridge"
         networks:
           static-network:
             ipv4_address: 172.17.0.251
