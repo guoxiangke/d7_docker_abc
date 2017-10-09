@@ -74,4 +74,5 @@ services:
       volumes:
         - /var/lib/mysql
         - /var/www/html/sites/default
+        - ./code/sites/default/settings.php:/var/www/html/sites/default/settings.php
         - /var/www/html/sites/default/files
