@@ -21,8 +21,8 @@ services:
         # ports:
         #     - "8080"
         environment:
-          - VIRTUAL_HOST=www.abc-chinaedu.com,abc-chinaedu.com,abc.yongbuzhxi.com,abc.vultr.yongbuzhixi.com
-          - LETSENCRYPT_HOST=www.abc-chinaedu.com,abc-chinaedu.com,abc.yongbuzhxi.com,abc.vultr.yongbuzhixi.com
+          - VIRTUAL_HOST=www.abc-chinaedu.com
+          - LETSENCRYPT_HOST=www.abc-chinaedu.com
           - LETSENCRYPT_EMAIL=dale.tel@139.com
     
     #api-code-app > drupal:fpm > php:7-fpm 只执行一次！！！
