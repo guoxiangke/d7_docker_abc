@@ -37,6 +37,7 @@ services:
           - storage-drupal
         volumes:
           - ./conf/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+          # - ./conf/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
           - ./conf/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
     db:
