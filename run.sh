@@ -41,7 +41,7 @@
 	# docker-compose -p $ProjectName down --remove-orphans ##not first time!
 
 	# //update code because it stop already!!!
-	docker-compose -p $ProjectName  -f ./docker-compose.yml rm -f -v storage-drupal
+	# docker-compose -p $ProjectName  -f ./docker-compose.yml rm -f -v storage-drupal
 	# sudo chmod 755 -R ./code
 	# sudo chown -R www-data:www-data ./code
 	docker-compose -p $ProjectName -f ./docker-compose.yml up -d  --build --remove-orphans --force-recreate
