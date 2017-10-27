@@ -13,8 +13,8 @@ services:
         links:
           - php
         environment:
-          - VIRTUAL_HOST=abcd.yongbuzhixi.com
-          - LETSENCRYPT_HOST=abcd.yongbuzhixi.com
+          - VIRTUAL_HOST=abc.yongbuzhixi.com
+          - LETSENCRYPT_HOST=abc.yongbuzhixi.com
           - LETSENCRYPT_EMAIL=dale.tel@139.com
     
     php:
