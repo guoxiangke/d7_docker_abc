@@ -24,6 +24,7 @@ services:
         volumes:
           - "./conf/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf:ro"
           - ./conf/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+          - /var/www/html/
           - "./code/sites/all:/var/www/html/sites/all"
           - "./code/sites/default/settings.php:/var/www/html/sites/default/settings.php:rw"
           - "./code/sites/default/files:/var/www/html/sites/default/files:rw"
