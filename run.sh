@@ -35,8 +35,8 @@
 	fi;
 	
 	
-	# docker-compose -p api down --remove-orphans
-	# docker-compose -p api -f ./docker-compose.yml up -d  --build --remove-orphans --force-recreate
+	# docker-compose -p abc down --remove-orphans
+	# docker-compose -p abc -f ./docker-compose.yml up -d  --build --remove-orphans --force-recreate
 	# docker exec -it api_php_1  ls /var/www/html/modules/
 	# docker-compose -p $ProjectName down --remove-orphans ##not first time!
 
