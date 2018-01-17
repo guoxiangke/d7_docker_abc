@@ -23,10 +23,10 @@
 	echo your github Branch must be $GitBranch
 	cd ./code
 	if [ -d .git ]; then
-		sudo git checkout .
-		sudo git fetch
-		sudo git checkout $GitBranch
-		sudo git pull origin $GitBranch
+		git checkout .
+		git fetch
+		git checkout $GitBranch
+		git pull origin $GitBranch
 		cd ../
 	else
 		cd ../
