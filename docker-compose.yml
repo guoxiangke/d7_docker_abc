@@ -4,7 +4,6 @@ services:
     drupal:
         image: drupal:7-apache
         restart: always
-        network_mode: "bridge"
         volumes:
           - "/var/log/apache2/abc:/var/log/apache2"
           - "./conf/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini"
@@ -14,21 +13,24 @@ services:
           - "./code/sites/default/files:/var/www/html/sites/default/files:rw"
           # - ".HACK core"
           # - "./code/includes/file.inc:/var/www/html/includes/file.inc"
-        links:
-          - db:mysql
+        # links:
+        #   - db:mysql
+        network_mode: "bridge"
+        external_links:
+          - db_mysql_1:mysql
         environment:
           - VIRTUAL_HOST=abc.yongbuzhixi.com,abc-chinaedu.com
           - LETSENCRYPT_HOST=abc.yongbuzhixi.com,abc-chinaedu.com
           - LETSENCRYPT_EMAIL=dale.tel@139.com
-    db:
-      image: mariadb
-      restart: always
-      network_mode: "bridge"
-      volumes:
-        - "./sql:/sql"
-        - "./sql/data:/var/lib/mysql"
-      environment:
-        - MYSQL_USER=drupal
-        - MYSQL_PASSWORD=drupal
-        - MYSQL_DATABASE=drupal
-        - MYSQL_ROOT_PASSWORD=drupal
+    # db:
+    #   image: mariadb
+    #   restart: always
+    #   network_mode: "bridge"
+    #   volumes:
+    #     - "./sql:/sql"
+    #     - "./sql/data:/var/lib/mysql"
+    #   environment:
+    #     - MYSQL_USER=drupal
+    #     - MYSQL_PASSWORD=drupal
+    #     - MYSQL_DATABASE=drupal
+    #     - MYSQL_ROOT_PASSWORD=drupal
